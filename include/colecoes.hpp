@@ -24,11 +24,9 @@ public:
         return &resultado->second;
     }
 
-    bool remover(const IdSensor& id) {
-        // TODO 02: true somente quando uma entrada for removida.
-        (void)id;
-        return false;
-    }
+   bool remover(const IdSensor& id) {
+    return itens_.erase(id) > 0;
+}
 
     std::size_t quantidade() const { return itens_.size(); }
 
